@@ -182,10 +182,10 @@ module.exports = {
 	},
 
 	async novoAssociado(req, res) {
-		
 		try{
 
 			const { cnpj, nomeEmpresa, senha, endereco} = req.body;
+			console.log(endereco);
 			const associadoNovo = await Associado.findOne({
 				where: { cnpj },
 			});
