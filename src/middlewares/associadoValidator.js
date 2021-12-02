@@ -3,6 +3,7 @@ const senhaSchema = require("../schemas/senhaSchema");
 const { cnpj } = require("cpf-cnpj-validator");
 
 function validatorRequest(req, res, next) {
+    console.log(req.body);
 
     if(req.route.path === "/login" || req.route.path === "/novo")
         if(!req.body.cnpj || !req.body.senha)
